@@ -19,13 +19,19 @@
                     <form action="index2.php">
                         <input id="cajaNombre" class="form-control" type="text" placeholder="Usuario" required="required">
                           <br/>
-                        <input id="cajaPassword" class="form-control" type="text" placeholder="Contraseña">
+                          <input id="cajaPassword" class="form-control" type="password" placeholder="Contraseña">
                           <br/>
                           <button id="boton1" class="btn btn-primary btn-block" type="submit">Primary</button>
                           <br/>
+                          <p>
+                            <input c data-validation="date" data-validation-format="yyyy-mm-dd" type="number" placeholder="Year (yyyy-mm-dd):">
+                          </p>
                     </form>
+                    
                 </div>
-                <div class="col-4"></div> 
+                <div class="col-4">
+                    
+                </div> 
             </div>
         </div>
         
@@ -34,11 +40,16 @@
         ?>
     </body>
     <script src="js/jquery-3.3.1.min.js" type="text/javascript"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-form-validator/2.3.26/jquery.form-validator.min.js"></script>
     
     <script>
          // document ready se ejecuta cuando toda la pagina se ha cargado correctamente
         $(document).ready(function() {
             $('#cajaNombre').hide();
+        });
+        
+        $.validate({
+            lang: 'es'
         });
         
         $('#boton1').click(function() {
@@ -48,5 +59,6 @@
             $('#cajaNombre').show(500);
             console.log("aqui tambien");
         });
+        
     </script>
 </html>
