@@ -5,14 +5,25 @@
         <title>PRUEBA DE PHP CON BOOTSTRAP</title>
         <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
     </head>
-    <body>
+    <body style="background-color: #666">
         <div class="container">
             <div class="row">
-                <div class="col-4">
-                    <button id="boton1" class="btn btn-primary">Primary</button>
+                <div class="col-12">
+                    <h2 class="text-center" style="color: white"> EJEMPLO INICIO DE SESION EN PHP </h2>
                 </div>
+            </div>
+            <div class="row">
+                <div class="col-4"></div>
                 <div class="col-4">
-                    <input id="cajaNombre" name="usuario_nombre" type="text" placeholder="Usuario">
+                    <br/><br/>
+                    <form action="index2.php">
+                        <input id="cajaNombre" class="form-control" type="text" placeholder="Usuario" required="required">
+                          <br/>
+                        <input id="cajaPassword" class="form-control" type="text" placeholder="Contraseña">
+                          <br/>
+                          <button id="boton1" class="btn btn-primary btn-block" type="submit">Primary</button>
+                          <br/>
+                    </form>
                 </div>
                 <div class="col-4"></div> 
             </div>
@@ -34,7 +45,7 @@
             console.log("aqui si llega");
             //$('#nombre').val("Why you are running?");
             //$('input[name=usuario_nombre]').val("Why you running?");
-            $('#cajaNombre').show(200);
+            $('#cajaNombre').show(500);
             console.log("aqui tambien");
         });
     </script>
