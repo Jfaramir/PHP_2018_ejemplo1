@@ -17,5 +17,5 @@ $numPreguntas = $resultadoQuery -> num_rows;
 
 for ( $i = 0; $i < $numPreguntas; $i++){
     $r = $resultadoQuery -> fetch_array();
-    
+    echo $r['enunciado'] .'<br/>'
 }
